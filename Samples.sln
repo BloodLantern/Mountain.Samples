@@ -1,26 +1,38 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{F838C23F-5AEB-4C56-852E-BFC6CF76477C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MetroidZeroMissionPcPort", "MetroidZeroMissionPcPort\MetroidZeroMissionPcPort.vcxproj", "{14EF4F28-0ACA-4495-B19A-B658B29AFB29}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameOfLife", "GameOfLife\GameOfLife.vcxproj", "{4DFB4753-740A-40B9-AB80-54D1ABD91ADC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Breakout", "Breakout\Breakout.vcxproj", "{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mountain", "..\Mountain\Mountain.vcxproj", "{154DAD25-D481-4A8B-AB51-2F9313034BE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Debug|x64.ActiveCfg = Debug|x64
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Debug|x64.Build.0 = Debug|x64
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Debug|x86.ActiveCfg = Debug|Win32
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Debug|x86.Build.0 = Debug|Win32
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Release|x64.ActiveCfg = Release|x64
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Release|x64.Build.0 = Release|x64
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Release|x86.ActiveCfg = Release|Win32
-		{F838C23F-5AEB-4C56-852E-BFC6CF76477C}.Release|x86.Build.0 = Release|Win32
+		{14EF4F28-0ACA-4495-B19A-B658B29AFB29}.Debug|x64.ActiveCfg = Debug|x64
+		{14EF4F28-0ACA-4495-B19A-B658B29AFB29}.Debug|x64.Build.0 = Debug|x64
+		{14EF4F28-0ACA-4495-B19A-B658B29AFB29}.Release|x64.ActiveCfg = Release|x64
+		{14EF4F28-0ACA-4495-B19A-B658B29AFB29}.Release|x64.Build.0 = Release|x64
+		{4DFB4753-740A-40B9-AB80-54D1ABD91ADC}.Debug|x64.ActiveCfg = Debug|x64
+		{4DFB4753-740A-40B9-AB80-54D1ABD91ADC}.Debug|x64.Build.0 = Debug|x64
+		{4DFB4753-740A-40B9-AB80-54D1ABD91ADC}.Release|x64.ActiveCfg = Release|x64
+		{4DFB4753-740A-40B9-AB80-54D1ABD91ADC}.Release|x64.Build.0 = Release|x64
+		{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}.Debug|x64.ActiveCfg = Debug|x64
+		{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}.Debug|x64.Build.0 = Debug|x64
+		{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}.Release|x64.ActiveCfg = Release|x64
+		{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}.Release|x64.Build.0 = Release|x64
+		{154DAD25-D481-4A8B-AB51-2F9313034BE7}.Debug|x64.ActiveCfg = Debug|x64
+		{154DAD25-D481-4A8B-AB51-2F9313034BE7}.Debug|x64.Build.0 = Debug|x64
+		{154DAD25-D481-4A8B-AB51-2F9313034BE7}.Release|x64.ActiveCfg = Release|x64
+		{154DAD25-D481-4A8B-AB51-2F9313034BE7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
