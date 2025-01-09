@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameOfLife", "GameOfLife\Ga
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Breakout", "Breakout\Breakout.vcxproj", "{54E1FA2B-40B8-4341-AEF3-EB48CE7954EC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mountain", "..\Mountain\Mountain.vcxproj", "{154DAD25-D481-4A8B-AB51-2F9313034BE7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mountain", "Mountain\Mountain\Mountain.vcxproj", "{154DAD25-D481-4A8B-AB51-2F9313034BE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
