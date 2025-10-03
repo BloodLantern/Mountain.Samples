@@ -1,10 +1,5 @@
-﻿#include "breakout.hpp"
-
-#include <ImGui/imgui.h>
-
-#include <Mountain/window.hpp>
-#include <Mountain/rendering/draw.hpp>
-#include <Mountain/utils/color.hpp>
+﻿#include "PrecompiledHeader.hpp"
+#include "Breakout.hpp"
 
 Breakout::Breakout()
     : Game("Mountain sample project - Breakout", { 1280, 720 })
@@ -14,8 +9,6 @@ Breakout::Breakout()
 
 void Breakout::Initialize()
 {
-    Game::Initialize();
-
     const Vector2 windowSize = Mountain::Window::GetSize();
 
     static constexpr int32_t BlockCount = 10;
@@ -27,12 +20,14 @@ void Breakout::Initialize()
     }
 }
 
+void Breakout::LoadResources()
+{
+}
+
 void Breakout::Shutdown()
 {
     for (const Block* const block : m_Blocks)
         delete block;
-
-    Game::Shutdown();
 }
 
 void Breakout::Update()
@@ -41,7 +36,7 @@ void Breakout::Update()
 
     for (Block* const block : m_Blocks)
         block->Update();
-    
+
     m_Paddle.Update();
 }
 
@@ -50,7 +45,7 @@ void Breakout::Render()
     Mountain::Draw::Clear(Mountain::Color::CornflowerBlue());
 
     m_Ball.Render();
-    
+
     for (Block* const block : m_Blocks)
         block->Render();
 
@@ -59,10 +54,10 @@ void Breakout::Render()
     if (m_ShowHitboxes)
     {
         m_Ball.RenderDebug();
-    
+
         for (Block* const block : m_Blocks)
             block->RenderDebug();
-        
+
         m_Paddle.RenderDebug();
     }
 

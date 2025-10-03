@@ -1,8 +1,5 @@
-﻿#include "block.hpp"
-
-#include <Mountain/collision/hitbox.hpp>
-
-#include "Mountain/rendering/draw.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "Block.hpp"
 
 Block::Block(Ball& ball)
     : m_Ball(&ball)
@@ -27,7 +24,7 @@ void Block::Render()
 {
     Entity::Render();
 
-    Mountain::Draw::RectangleFilled(m_Collider->AbsoluteTopLeft(), Vector2::One() * BlockSize, Mountain::Color::Gray());
+    Mountain::Draw::RectangleFilled(m_Collider->AbsoluteTopLeft(), Vector2::One() * BlockSize, 0.f, Vector2::Zero(), Mountain::Color::Gray());
 }
 
 void Block::RenderDebug()

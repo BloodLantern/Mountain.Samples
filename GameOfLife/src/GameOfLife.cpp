@@ -1,10 +1,7 @@
-﻿#include "game_of_life.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "GameOfLife.hpp"
 
-#include "ImGui/imgui.h"
-#include "Mountain/input/input.hpp"
-#include "Mountain/input/time.hpp"
-#include "Mountain/rendering/draw.hpp"
-#include "Mountain/rendering/renderer.hpp"
+#include <ImGui/imgui.h>
 
 namespace
 {
@@ -23,8 +20,10 @@ void GameOfLife::Initialize()
     Mountain::Window::onSizeChanged += [&](const Vector2i newSize) { m_RenderTarget.SetSize(newSize); };
 
     m_Grid.PreRenderGrid();
+}
 
-    Game::Initialize();
+void GameOfLife::LoadResources()
+{
 }
 
 void GameOfLife::Update()
@@ -48,7 +47,7 @@ void GameOfLife::Update()
     }
 
     if (Mountain::Input::GetKey(Mountain::Key::Escape))
-        Mountain::Window::SetShouldClose(true);
+        Mountain::Window::shouldClose = true;
 
     m_Camera.UpdateMatrices();
 
@@ -71,6 +70,8 @@ void GameOfLife::Render()
     Mountain::Draw::Rectangle(
         Vector2::Zero(),
         { static_cast<float_t>(m_Grid.GetWidth() * BlockSize), static_cast<float_t>(m_Grid.GetHeight() * BlockSize) },
+        0,
+        Vector2::Zero(),
         Mountain::Color::Gray()
     );
 
@@ -86,9 +87,9 @@ void GameOfLife::Render()
         Mountain::Time::GetDeltaTime(),
         Mountain::Time::GetTargetDeltaTime() - Mountain::Time::GetLastFrameDuration()
     );
-    bool_t fullscreen = Mountain::Window::GetFullscreen();
-    ImGui::Checkbox("Fullscreen", &fullscreen);
-    Mountain::Window::SetFullscreen(fullscreen);
+    Mountain::WindowMode fullscreen = Mountain::Window::GetWindowMode();
+    ImGui::ComboEnum("Fullscreen", &fullscreen);
+    Mountain::Window::SetWindowMode(fullscreen);
     ImGui::DragFloat2("Camera position", m_Camera.position.Data());
     if (ImGui::Button("-"))
         m_Camera.ZoomOut();
@@ -125,5 +126,4 @@ void GameOfLife::Render()
 
 void GameOfLife::Shutdown()
 {
-    Game::Shutdown();
 }

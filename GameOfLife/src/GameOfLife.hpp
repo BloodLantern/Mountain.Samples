@@ -1,9 +1,10 @@
 ﻿#pragma once
 
-#include "camera.hpp"
-#include "grid.hpp"
-#include "Mountain/game.hpp"
-#include "Mountain/rendering/render_target.hpp"
+#include <Mountain/Game.hpp>
+#include <Mountain/Graphics/RenderTarget.hpp>
+
+#include "Camera.hpp"
+#include "Grid.hpp"
 
 class GameOfLife : public Mountain::Game
 {
@@ -11,6 +12,7 @@ public:
     explicit GameOfLife(const char_t* title);
 
     void Initialize() override;
+    void LoadResources() override;
     void Update() override;
     void Render() override;
     void Shutdown() override;

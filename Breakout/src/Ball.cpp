@@ -1,11 +1,5 @@
-﻿#include "ball.hpp"
-
-#include <Mountain/window.hpp>
-#include <Mountain/collision/circle.hpp>
-#include <Mountain/input/time.hpp>
-#include <Mountain/rendering/draw.hpp>
-
-#include "Mountain/utils/random.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "Ball.hpp"
 
 Ball::Ball()
 {
@@ -14,7 +8,7 @@ Ball::Ball()
 
     position = Mountain::Window::GetSize() * 0.5f;
 
-    velocity = Mountain::Random::Direction() * BallMovementSpeed;
+    velocity = Mountain::Random::Instance().Direction() * BallMovementSpeed;
 }
 
 Ball::~Ball()
@@ -54,7 +48,7 @@ void Ball::Update()
         velocity.y *= -1.f;
         position.y = BallRadius;
     }
-    
+
     if (m_Collider->AbsoluteLeft() < 0.f)
     {
         velocity.x *= -1.f;

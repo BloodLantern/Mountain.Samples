@@ -1,9 +1,5 @@
-﻿#include "block.hpp"
-
-#include <stdexcept>
-
-#include "Maths/vector2.hpp"
-#include "Mountain/rendering/draw.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "Block.hpp"
 
 #define CHECK_RANGE(x, y)                                                                                   \
     if ((x) >= BlockSize || (y) >= BlockSize)                                                               \

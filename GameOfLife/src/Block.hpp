@@ -1,7 +1,6 @@
 ﻿#pragma once
 
-#include "Maths/vector2.hpp"
-#include "Mountain/core.hpp"
+#include <Math/Vector2.hpp>
 
 using BlockType = uint64_t;
 constexpr uint8_t BlockSize = sizeof(BlockType) * 8;

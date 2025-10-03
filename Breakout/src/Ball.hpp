@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include <Mountain/scene/entity.hpp>
+#include <Mountain/Ecs/Entity.hpp>
 
 /// @brief Radius of the balls
 constexpr float_t BallRadius = 10.f;
@@ -18,7 +18,7 @@ public:
     Ball(Ball&& other) noexcept;
     Ball& operator=(const Ball& other) noexcept = default;
     Ball& operator=(Ball&& other) noexcept;
-    
+
     void Update() override;
     void Render() override;
     void RenderDebug() override;

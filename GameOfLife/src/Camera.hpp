@@ -1,8 +1,6 @@
 ﻿#pragma once
 
-#include "Maths/matrix.hpp"
-#include "Maths/vector2.hpp"
-#include "Mountain/window.hpp"
+#include "Mountain/Window.hpp"
 
 constexpr float_t CameraZoomFactor = 1.25f;
 
@@ -21,16 +19,16 @@ public:
     void ZoomOut(Vector2 targetWindowPosition = Mountain::Window::GetSize() * 0.5f);
     void SetZoom(float_t newZoom);
 
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     Vector2 ToWorld(Vector2 screenPoint) const;
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     Vector2 ToScreen(Vector2 worldPoint) const;
 
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     float_t GetZoom() const;
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     const Matrix& GetMatrix() const;
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     const Matrix& GetInverseMatrix() const;
 
 private:

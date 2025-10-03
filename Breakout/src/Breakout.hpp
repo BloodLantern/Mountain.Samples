@@ -2,9 +2,9 @@
 
 #include <Mountain/game.hpp>
 
-#include "ball.hpp"
-#include "block.hpp"
-#include "paddle.hpp"
+#include "Ball.hpp"
+#include "Block.hpp"
+#include "Paddle.hpp"
 
 class Breakout : public Mountain::Game
 {
@@ -16,8 +16,9 @@ private:
     Ball m_Ball;
     Mountain::List<Block*> m_Blocks;
     bool_t m_ShowHitboxes = false;
-    
+
     void Initialize() override;
+    void LoadResources() override;
     void Shutdown() override;
     void Update() override;
     void Render() override;

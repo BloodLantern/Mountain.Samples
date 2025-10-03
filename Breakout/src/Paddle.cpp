@@ -1,10 +1,5 @@
-﻿#include "paddle.hpp"
-
-#include <Mountain/collision/hitbox.hpp>
-#include <Mountain/input/input.hpp>
-#include <Mountain/rendering/draw.hpp>
-
-#include <ImGui/imgui.h>
+﻿#include "PrecompiledHeader.hpp"
+#include "Paddle.hpp"
 
 Paddle::Paddle(Ball& ball)
     : m_Ball(&ball)
@@ -21,7 +16,7 @@ Paddle::~Paddle()
 void Paddle::Update()
 {
     Entity::Update();
-    
+
     const Vector2 windowSize = Mountain::Window::GetSize();
     position.x = Calc::Clamp(
         Mountain::Input::GetMousePosition().x,
@@ -36,14 +31,14 @@ void Paddle::Update()
 void Paddle::Render()
 {
     Entity::Render();
-    
+
     Mountain::Draw::RectangleFilled(m_Collider->AbsoluteTopLeft(), PlayerSize);
 }
 
 void Paddle::RenderDebug()
 {
     Entity::RenderDebug();
-    
+
     m_Collider->RenderDebug(Mountain::Color::Red());
 }
 

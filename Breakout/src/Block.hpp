@@ -1,8 +1,8 @@
 ﻿#pragma once
 
-#include <Mountain/scene/entity.hpp>
+#include <Mountain/Ecs/Entity.hpp>
 
-#include "ball.hpp"
+#include "Ball.hpp"
 
 constexpr float_t BlockSize = 50.f;
 
@@ -13,7 +13,7 @@ public:
     ~Block() override;
 
     DEFAULT_COPY_MOVE_OPERATIONS(Block)
-    
+
     void Update() override;
     void Render() override;
     void RenderDebug() override;

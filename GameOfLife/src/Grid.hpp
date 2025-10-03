@@ -1,7 +1,8 @@
 ﻿#pragma once
 
-#include "block.hpp"
-#include "Mountain/rendering/render_target.hpp"
+#include <Mountain/Graphics/RenderTarget.hpp>
+
+#include "Block.hpp"
 
 constexpr float_t GridPreRenderGridFactor = 10.f;
 
@@ -17,15 +18,15 @@ public:
     void PreRenderGrid();
     void Render();
 
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     uint64_t GetWidth() const;
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     uint64_t GetHeight() const;
     void SetSize(uint64_t newWidth, uint64_t newHeight);
 
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     Block& GetBlock(uint64_t x, uint64_t y);
-    [[nodiscard]]
+    ATTRIBUTE_NODISCARD
     bool_t GetCell(uint64_t blockX, uint64_t blockY, uint8_t cellX, uint8_t cellY);
     void SetCell(uint64_t blockX, uint64_t blockY, uint8_t cellX, uint8_t cellY, bool_t value);
     void ToggleCell(uint64_t blockX, uint64_t blockY, uint8_t cellX, uint8_t cellY);

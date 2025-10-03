@@ -1,7 +1,5 @@
-﻿#include "grid.hpp"
-
-#include "Mountain/rendering/draw.hpp"
-#include "Mountain/rendering/renderer.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "Grid.hpp"
 
 Grid::~Grid()
 {
@@ -172,6 +170,7 @@ void Grid::PreRenderGrid()
         Mountain::Draw::Line(
             { 0.f, static_cast<float_t>(y) * GridPreRenderGridFactor },
             { static_cast<float_t>(m_Width * BlockSize) * GridPreRenderGridFactor, static_cast<float_t>(y) * GridPreRenderGridFactor },
+            1.f,
             Mountain::Color{ 0.2f }
         );
     }
@@ -180,6 +179,7 @@ void Grid::PreRenderGrid()
         Mountain::Draw::Line(
             { static_cast<float_t>(x) * GridPreRenderGridFactor, 0.f },
             { static_cast<float_t>(x) * GridPreRenderGridFactor, static_cast<float_t>(m_Height * BlockSize) * GridPreRenderGridFactor },
+            1.f,
             Mountain::Color{ 0.2f }
         );
     }
@@ -189,6 +189,7 @@ void Grid::PreRenderGrid()
         Mountain::Draw::Line(
             { 0.f, static_cast<float_t>(y * BlockSize) * GridPreRenderGridFactor },
             { static_cast<float_t>(m_Width * BlockSize) * GridPreRenderGridFactor, static_cast<float_t>(y * BlockSize) * GridPreRenderGridFactor },
+            1.f,
             Mountain::Color{ 0.5f }
         );
     }
@@ -197,6 +198,7 @@ void Grid::PreRenderGrid()
         Mountain::Draw::Line(
             { static_cast<float_t>(x * BlockSize) * GridPreRenderGridFactor, 0.f },
             { static_cast<float_t>(x * BlockSize) * GridPreRenderGridFactor, static_cast<float_t>(m_Height * BlockSize) * GridPreRenderGridFactor },
+            1.f,
             Mountain::Color{ 0.5f }
         );
     }

@@ -1,7 +1,5 @@
-﻿#include "camera.hpp"
-
-#include "ImGui/imgui.h"
-#include "Mountain/input/input.hpp"
+﻿#include "PrecompiledHeader.hpp"
+#include "Camera.hpp"
 
 Camera::Camera()
     : m_Size(Mountain::Window::GetSize())
